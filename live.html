@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Прямые эфиры - Средняя школа №11</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Прямые эфиры</h1>
+    <p>Смотрите трансляции уроков и школьных событий в реальном времени.</p>
+</header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="classes.html">Классы</a>
+    <a href="live.html">Прямые эфиры</a>
+    <a href="contact.html">Контакты</a>
+</nav>
+
+<section>
+    <h2>Прямой эфир</h2>
+    <p>Ниже представлен прямой эфир с нашего YouTube канала. Если эфир не активен, вы увидите сообщение.</p>
+    <div id="live-stream">
+        <!-- Замените YOUR_CHANNEL_ID на ID вашего канала -->
+        <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" 
+                title="Прямой эфир" frameborder="0" allowfullscreen></iframe>
+        <div class="no-stream" id="no-stream">Эфир пока не активен. Проверьте позже!</div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Средняя школа №11 села Арна. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

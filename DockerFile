@@ -1,0 +1,11 @@
+# 1. Берём официальный образ Nginx
+FROM nginx:alpine
+
+# 2. Копируем все файлы сайта в стандартную папку Nginx
+COPY . /usr/share/nginx/html
+
+# 3. Открываем порт 80
+EXPOSE 80
+
+# 4. Запуск Nginx в форграунд режиме
+CMD ["nginx", "-g", "daemon off;"]
