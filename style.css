@@ -35,12 +35,14 @@ header p {
     animation-delay: 0.5s;
 }
 
+/* Навигация */
 nav {
     background-color: #001f3f;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    flex-wrap: wrap; /* чтобы ссылки переносились на маленьких экранах */
 }
 
 nav a {
@@ -50,6 +52,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 nav a:hover {
@@ -67,6 +70,7 @@ nav select {
     font-weight: bold;
 }
 
+/* Секции */
 section {
     padding: 40px 20px;
     margin: 20px auto;
@@ -84,6 +88,7 @@ h2 {
     padding-bottom: 5px;
 }
 
+/* Футер */
 footer {
     background: #001f3f;
     color: white;
@@ -91,7 +96,31 @@ footer {
     padding: 15px;
 }
 
+/* Анимации */
 @keyframes fadeIn { 0% {opacity:0;} 100% {opacity:1;} }
 @keyframes slideDown { 0% {opacity:0; transform: translateY(-30px);} 100% {opacity:1; transform: translateY(0);} }
 @keyframes fadeInText { 0% {opacity:0;} 100% {opacity:1;} }
 @keyframes fadeUp { 0% {opacity:0; transform: translateY(30px);} 100% {opacity:1; transform: translateY(0);} }
+
+/* Адаптивность для телефонов */
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+
+    nav a { padding: 10px 14px; font-size: 0.9rem; }
+    nav select { padding: 6px 10px; font-size: 0.9rem; }
+
+    section { padding: 30px 15px; margin: 15px; max-width: 95%; }
+}
+
+/* Адаптивность для маленьких телефонов */
+@media (max-width: 480px) {
+    header h1 { font-size: 1.7rem; }
+    header p { font-size: 0.9rem; }
+
+    nav { flex-direction: column; gap: 2px; }
+    nav a { padding: 8px 10px; font-size: 0.85rem; }
+    nav select { width: 100%; margin-top: 5px; }
+
+    section { padding: 20px 10px; margin: 10px; }
+}
