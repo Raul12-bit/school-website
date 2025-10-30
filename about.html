@@ -1,72 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>О нас - Средняя школа №11</title>
-<link rel="stylesheet" href="style.css">
-<style>
-/* Сетка для видео: 3 в ряд */
-.video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.video-grid iframe {
-    flex: 1 1 calc(33.333% - 20px); /* три блока в ряд с отступами */
-    min-width: 250px; /* чтобы на маленьких экранах блоки не сжимались слишком сильно */
-    height: 180px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
-}
-
-.video-grid iframe:hover {
-    transform: scale(1.05);
-}
-
-
-
-    .about {
-        position: relative;
-        top: 1px;
-    }
-
-</style>
+    <meta charset="UTF-8">
+    <title>Мектеп туралы - №2 Орта Мектеп</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-    <h1>О нас</h1>
-    <p>Наша школа основана в 1990 году. Мы предлагаем качественное образование для детей от 6 до 17 лет.</p>
+    <h1 id="title">№2 Орта Мектеп</h1>
+    <p id="subtitle">Білім мен жетістік жолында!</p>
 </header>
 
 <nav>
-    <a href="index.html">Главная</a>
-    <a href="about.html">О нас</a>
-    <a href="classes.html">Классы</a>
-    <a href="live.html">Прямые эфиры</a>
-    <a href="contact.html">Контакты</a>
+    <a href="index.html" id="nav-main">Басты бет</a>
+    <a href="about.html" id="nav-about">Мектеп туралы</a>
+    <a href="schedule.html" id="nav-schedule">Сабақ кестесі</a>
+    <a href="teachers.html" id="nav-teachers">Мұғалімдер</a>
+    <a href="news.html" id="nav-news">Жаңалықтар</a>
+    <a href="contacts.html" id="nav-contacts">Байланыс</a>
+
+    <select id="langSelect">
+        <option value="kk">Қазақша</option>
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+    </select>
 </nav>
 
 <main>
-<section>
-    <h2>Наши видео</h2>
-    <div class="video-grid">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Видео 1" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Видео 2" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Видео 3" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Видео 4" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" title="Видео 5" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" title="Видео 6" allowfullscreen></iframe>
-    </div>
-</section>
+    <section>
+        <h2 id="about-title">Мектеп туралы</h2>
+        <p id="about-text">
+            №2 орта мектеп — 1985 жылы ашылған заманауи білім ордасы. 
+            Бүгінгі таңда мектепте 700-ден астам оқушы оқиды, 50-ге жуық жоғары білімді ұстаз еңбек етеді.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="mission-title">Миссия</h2>
+        <p id="mission-text">
+            Әр оқушыға сапалы білім мен өмірлік дағдыларды меңгерту арқылы табысты тұлға қалыптастыру.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="director-title">Мектеп директоры</h2>
+        <p id="director-text">
+            Директор: Айжан Қ. С.<br>
+            15 жылдан астам тәжірибесі бар педагог, білім беру саласындағы үздік маман.
+        </p>
+    </section>
 </main>
 
-<footer class="about">
-    <p>&copy; 2025 Средняя школа №2 села Арна. Все права защищены.</p>
+<footer>
+    <p id="footer-text">© 2025 №2 орта мектеп. Барлық құқықтар қорғалған.</p>
 </footer>
 
 <script src="script.js"></script>
