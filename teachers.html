@@ -5,9 +5,7 @@
     <title>Мұғалімдер - №2 Орта Мектеп</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" href="N2mektep.jpg" type="image/x-icon">
-
-
+    <link rel="icon" href="N2mektep.jpg" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -17,10 +15,12 @@
 
 <nav>
     <a href="index.html" id="nav-main">Басты бет</a>
+    <a href="about.html" id="nav-about">Мектеп туралы</a>
     <a href="schedule.html" id="nav-schedule">Сабақ кестесі</a>
     <a href="teachers.html" id="nav-teachers">Мұғалімдер</a>
     <a href="news.html" id="nav-news">Жаңалықтар</a>
     <a href="contacts.html" id="nav-contacts">Байланыс</a>
+
     <select id="langSelect">
         <option value="kk">Қазақша</option>
         <option value="ru">Русский</option>
@@ -28,13 +28,17 @@
     </select>
 </nav>
 
+<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
+
 <main>
     <section>
-        <h2 id="teachers-title">Біздің мұғалімдер</h2>
-        <ul id="teachers-list">
-            <li>Айгерім Т. — Қазақ тілі</li>
-            <li>Сергей В. — Математика</li>
-            <li>Мария К. — Ағылшын тілі</li>
+        <h2>Мұғалімдер</h2>
+        <p>Барлық мұғалімдер туралы ақпаратты осы жерде орналастырыңыз.</p>
+        <ul>
+            <li>Математика: Жеңісбек М.С</li>
+            <li>Қазақ тілі: Байдуллаева Г.С</li>
+            <li>Ағылшын тілі: Мусабаева Д.К</li>
+            <!-- Добавь остальных -->
         </ul>
     </section>
 </main>
@@ -43,11 +47,6 @@
     <p id="footer-text">© 2025 №2 орта мектеп. Барлық құқықтар қорғалған.</p>
 </footer>
 
-
-
-
 <script src="script.js"></script>
 </body>
-
-
 </html>

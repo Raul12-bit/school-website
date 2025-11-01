@@ -146,3 +146,29 @@ document.addEventListener("DOMContentLoaded", function() {
     langSelect.value = savedLang;
     updateLang(savedLang);
 });
+
+
+
+
+const themeToggle = document.getElementById('theme-toggle');
+
+// проверяем localStorage при загрузке страницы
+if(localStorage.getItem('nightMode') === 'true'){
+    document.body.classList.add('night');
+    themeToggle.textContent = '☀️';
+} else {
+    themeToggle.textContent = '🌙';
+}
+
+// переключение режима
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('night');
+    if(document.body.classList.contains('night')){
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('nightMode', 'true');
+    } else {
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('nightMode', 'false');
+    }
+});
+
