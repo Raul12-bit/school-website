@@ -2,24 +2,23 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Мектеп туралы - №2 Орта Мектеп</title>
+    <title>Мектеп туралы</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="N2mektep.jpg" type="image/x-icon">
 </head>
 <body>
 <header>
-    <h1 id="title">№2 Орта Мектеп</h1>
-    <p id="subtitle">Білім мен жетістік жолында!</p>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
 </header>
 
 <nav>
-    <a href="index.html" id="nav-main">Басты бет</a>
-    <a href="about.html" id="nav-about">Мектеп туралы</a>
-    <a href="schedule.html" id="nav-schedule">Сабақ кестесі</a>
-    <a href="teachers.html" id="nav-teachers">Мұғалімдер</a>
-    <a href="news.html" id="nav-news">Жаңалықтар</a>
-    <a href="contacts.html" id="nav-contacts">Байланыс</a>
+    <a href="index.html" id="nav-main"></a>
+    <a href="about.html" id="nav-about"></a>
+    <a href="schedule.html" id="nav-schedule"></a>
+    <a href="teachers.html" id="nav-teachers"></a>
+    <a href="news.html" id="nav-news"></a>
+    <a href="contacts.html" id="nav-contacts"></a>
 
     <select id="langSelect">
         <option value="kk">Қазақша</option>
@@ -28,38 +27,47 @@
     </select>
 </nav>
 
-<!-- Кнопка ночного режима -->
 <button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
 
 <main>
     <section>
-        <h2 id="about-title">Мектеп туралы</h2>
-        <p id="about-text">
-            №2 орта мектеп — 1985 жылы ашылған заманауи білім ордасы. 
-            Бүгінгі таңда мектепте 700-ден астам оқушы оқиды, 50-ге жуық жоғары білімді ұстаз еңбек етеді.
-        </p>
-    </section>
-
-    <section>
-        <h2 id="mission-title">Миссия</h2>
-        <p id="mission-text">
-            Әр оқушыға сапалы білім мен өмірлік дағдыларды меңгерту арқылы табысты тұлға қалыптастыру.
-        </p>
-    </section>
-
-    <section>
-        <h2 id="director-title">Мектеп директоры</h2>
-        <p id="director-text">
-            Директор: Айжан Қ. С.<br>
-            15 жылдан астам тәжірибесі бар педагог, білім беру саласындағы үздік маман.
-        </p>
+        <h2 id="about-title"></h2>
+        <p id="about-text"></p>
     </section>
 </main>
 
 <footer>
-    <p id="footer-text">© 2025 №2 орта мектеп. Барлық құқықтар қорғалған.</p>
+    <p id="footer-text"></p>
 </footer>
 
 <script src="script.js"></script>
+<script>
+const dataExtra = {
+    kk: {
+        "about-title": "Мектеп туралы",
+        "about-text": "№2 орта мектеп 1990 жылы құрылды. Мұнда білім сапасы жоғары және түрлі үйірмелер бар. Біз балаларға жан-жақты дамуға мүмкіндік береміз."
+    },
+    ru: {
+        "about-title": "О школе",
+        "about-text": "Средняя школа №2 была основана в 1990 году. Здесь высокое качество образования и различные кружки. Мы даем детям возможность развиваться всесторонне."
+    },
+    en: {
+        "about-title": "About School",
+        "about-text": "Secondary School No. 2 was founded in 1990. It has high-quality education and various clubs. We provide children with opportunities for comprehensive development."
+    }
+};
+
+function updateExtra() {
+    const lang = document.getElementById("langSelect").value;
+    const t = dataExtra[lang];
+    for (let key in t) {
+        const el = document.getElementById(key);
+        if (el) el.innerHTML = t[key];
+    }
+}
+
+document.getElementById("langSelect").addEventListener("change", updateExtra);
+updateExtra();
+</script>
 </body>
 </html>

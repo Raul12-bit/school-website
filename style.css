@@ -1,4 +1,3 @@
-/* --- твои стили (оставляем) --- */
 * {
     margin: 0;
     padding: 0;
@@ -9,21 +8,17 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #ffffff, #f0f4ff);
     color: #003366;
-    scroll-behavior: smooth;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    transition: background 0.8s ease, color 0.8s ease;
+    transition: background 0.5s, color 0.5s;
 }
 
 header {
     background: linear-gradient(90deg, #003366, #0055a5);
     color: white;
-    padding: 25px 20px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 100%;
-    transition: background 0.8s ease;
+    padding: 25px 20px;
 }
 
 header h1 {
@@ -35,23 +30,23 @@ header p {
 }
 
 nav {
-    background-color: #003366;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
     flex-wrap: wrap;
+    gap: 10px;
     padding: 12px 0;
+    background-color: #003366;
 }
 
 nav a {
-    color: white;
-    padding: 12px 22px;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
+    padding: 10px 18px;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    font-weight: bold;
     background-color: #0055a5;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -60,33 +55,32 @@ nav a:hover {
 }
 
 nav select {
+    padding: 6px 10px;
+    border-radius: 8px;
     background-color: #0055a5;
     color: white;
     border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 main {
     flex: 1;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
 }
 
 section {
     width: 90%;
     max-width: 1200px;
     background: #ffffff;
-    padding: 30px 25px;
+    padding: 25px 20px;
     margin: 20px 0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
 section:hover {
@@ -107,33 +101,27 @@ footer {
     padding: 25px;
 }
 
-/* --- кнопка ночного режима --- */
 #theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
     background-color: #0055a5;
     color: white;
     border: none;
     padding: 10px 14px;
     border-radius: 50%;
-    font-size: 18px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    z-index: 1000;
+    transition: 0.3s;
 }
 
 #theme-toggle:hover {
-    background-color: #0077cc;
     transform: scale(1.1);
+    background-color: #0077cc;
 }
 
-/* --- таблица расписания --- */
-.schedule-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
+/* Таблицы */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -142,9 +130,8 @@ table {
 
 th, td {
     border: 1px solid #003366;
-    padding: 10px 8px;
+    padding: 10px;
     text-align: center;
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
 th {
@@ -156,7 +143,7 @@ tr:nth-child(even) {
     background-color: #f2f6ff;
 }
 
-/* --- ночной режим --- */
+/* --- Ночной режим --- */
 body.night {
     background: linear-gradient(to bottom, #1e1e2f, #2c2c3f);
     color: #cfd8dc;
@@ -193,4 +180,14 @@ body.night tr:nth-child(even) {
 
 body.night td {
     color: #cfd8dc;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+    nav { gap: 6px; padding: 8px 0; }
+    nav a { padding: 8px 12px; font-size: 0.9rem; }
+    section { padding: 15px 12px; }
+    table th, table td { padding: 6px 4px; font-size: 0.85rem; }
 }

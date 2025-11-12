@@ -2,171 +2,114 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Сабақ кестесі - №2 Орта Мектеп</title>
+    <title>Сабақ кестесі</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="N2mektep.jpg" type="image/x-icon">
 </head>
 <body>
 <header>
-    <h1>№2 Орта Мектеп</h1>
-    <p>Білім мен жетістік жолында!</p>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
 </header>
 
 <nav>
-    <a href="index.html">Басты бет</a>
-    <a href="about.html" id="nav-about">Мектеп туралы</a>
-    <a href="schedule.html">Сабақ кестесі</a>
-    <a href="teachers.html">Мұғалімдер</a>
-    <a href="news.html">Жаңалықтар</a>
-    <a href="contacts.html">Байланыс</a>
+    <a href="index.html" id="nav-main"></a>
+    <a href="about.html" id="nav-about"></a>
+    <a href="schedule.html" id="nav-schedule"></a>
+    <a href="teachers.html" id="nav-teachers"></a>
+    <a href="news.html" id="nav-news"></a>
+    <a href="contacts.html" id="nav-contacts"></a>
 
     <select id="langSelect">
         <option value="kk">Қазақша</option>
         <option value="ru">Русский</option>
         <option value="en">English</option>
     </select>
-    <button id="theme-toggle">🌙</button>
 </nav>
+
+<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
 
 <main>
     <section>
-        <h2>Сабақ кестесі</h2>
-        <div class="schedule-container">
-
-            <!-- ДҮЙСЕНБІ -->
-            <div class="day-block">
-                <h3>Дүйсенбі</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Уақыт</th>
-                            <th>5А</th>
-                            <th>6А</th>
-                            <th>7А</th>
-                            <th>8А</th>
-                            <th>9А</th>
-                            <th>10А</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>8:00–8:45</td><td>Сынып сағ</td><td>Қазақ тілі</td><td>Орыс тілі</td><td>Алгебра</td><td>География</td><td>Физика</td></tr>
-                        <tr><td>8:50–9:35</td><td>Орыс тілі-әд</td><td>Математика</td><td>Биология</td><td>Физика</td><td>Қазақ тілі</td><td>Ағылшын</td></tr>
-                        <tr><td>9:40–10:25</td><td>Информатика</td><td>Ағылшын</td><td>Тарих</td><td>География</td><td>Физика</td><td>Химия</td></tr>
-                        <tr><td>10:35–11:20</td><td>Математика</td><td>Қазақ әдебиеті</td><td>Математика</td><td>Алгебра</td><td>Орыс тілі</td><td>Тарих</td></tr>
-                        <tr><td>11:25–12:10</td><td>Қазақ тілі</td><td>Жаратылыстану</td><td>Ағылшын</td><td>Қазақ тілі</td><td>Химия</td><td>Биология</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- СЕЙСЕНБІ -->
-            <div class="day-block">
-                <h3>Сейсенбі</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Уақыт</th>
-                            <th>5А</th>
-                            <th>6А</th>
-                            <th>7А</th>
-                            <th>8А</th>
-                            <th>9А</th>
-                            <th>10А</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>8:00–8:45</td><td>Орыс тілі-әд</td><td>Қазақ әдебиеті</td><td>Алгебра</td><td>География</td><td>Тарих</td><td>Физика</td></tr>
-                        <tr><td>8:50–9:35</td><td>Дүние тарих</td><td>Ағылшын</td><td>Физика</td><td>Биология</td><td>Химия</td><td>Алгебра</td></tr>
-                        <tr><td>9:40–10:25</td><td>Дене шынық</td><td>Математика</td><td>Қазақ тілі</td><td>Қазақ әдебиеті</td><td>Ағылшын</td><td>География</td></tr>
-                        <tr><td>10:35–11:20</td><td>Математика</td><td>Қазақ тілі</td><td>Тарих</td><td>Орыс тілі</td><td>Физика</td><td>Алгебра</td></tr>
-                        <tr><td>11:25–12:10</td><td>Музыка</td><td>Физика</td><td>Қазақ тілі</td><td>Алгебра</td><td>Тарих</td><td>Биология</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- СӘРСЕНБІ -->
-            <div class="day-block">
-                <h3>Сәрсенбі</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Уақыт</th>
-                            <th>5А</th>
-                            <th>6А</th>
-                            <th>7А</th>
-                            <th>8А</th>
-                            <th>9А</th>
-                            <th>10А</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>8:00–8:45</td><td>Ағылшын т</td><td>Қазақ әдебиеті</td><td>Биология</td><td>Физика</td><td>География</td><td>Орыс тілі</td></tr>
-                        <tr><td>8:50–9:35</td><td>Көркем еңбек</td><td>Физика</td><td>Ағылшын</td><td>Алгебра</td><td>Тарих</td><td>Ағылшын</td></tr>
-                        <tr><td>9:40–10:25</td><td>Дене шынық</td><td>Қазақ тілі</td><td>Математика</td><td>Орыс әдебиеті</td><td>Химия</td><td>Биология</td></tr>
-                        <tr><td>10:35–11:20</td><td>Математика</td><td>Алгебра</td><td>Физика</td><td>Қазақ тілі</td><td>Алгебра</td><td>Тарих</td></tr>
-                        <tr><td>11:25–12:10</td><td>Жаратылыс</td><td>Биология</td><td>Химия</td><td>Ағылшын</td><td>Қазақ әдебиеті</td><td>Физика</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- БЕЙСЕНБІ -->
-            <div class="day-block">
-                <h3>Бейсенбі</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Уақыт</th>
-                            <th>5А</th>
-                            <th>6А</th>
-                            <th>7А</th>
-                            <th>8А</th>
-                            <th>9А</th>
-                            <th>10А</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>8:00–8:45</td><td>Жаратылыс</td><td>Ағылшын</td><td>Математика</td><td>Физика</td><td>Қазақ тілі</td><td>Алгебра</td></tr>
-                        <tr><td>8:50–9:35</td><td>Ағылшын т</td><td>Биология</td><td>Қазақ тілі</td><td>Химия</td><td>Физика</td><td>Тарих</td></tr>
-                        <tr><td>9:40–10:25</td><td>Математика</td><td>Қазақ тілі</td><td>Алгебра</td><td>Ағылшын</td><td>Химия</td><td>Физика</td></tr>
-                        <tr><td>10:35–11:20</td><td>Дене шынық</td><td>Физика</td><td>География</td><td>Қазақ әдебиеті</td><td>Ағылшын</td><td>Биология</td></tr>
-                        <tr><td>11:25–12:10</td><td>Қаз тарих</td><td>Математика</td><td>Биология</td><td>Алгебра</td><td>Орыс тілі</td><td>Химия</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- ЖҰМА -->
-            <div class="day-block">
-                <h3>Жұма</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Уақыт</th>
-                            <th>5А</th>
-                            <th>6А</th>
-                            <th>7А</th>
-                            <th>8А</th>
-                            <th>9А</th>
-                            <th>10А</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>8:00–8:45</td><td>Орыс тілі</td><td>Информатика</td><td>Ағылшын</td><td>Физика</td><td>Қазақ әдебиеті</td><td>Алгебра</td></tr>
-                        <tr><td>8:50–9:35</td><td>Ағылшын т</td><td>Қазақ тілі</td><td>Математика</td><td>Алгебра</td><td>Биология</td><td>Химия</td></tr>
-                        <tr><td>9:40–10:25</td><td>Математика</td><td>Ағылшын</td><td>Жаратылыс</td><td>Қазақ әдебиеті</td><td>Физика</td><td>Биология</td></tr>
-                        <tr><td>10:35–11:20</td><td>Қазақ тілі</td><td>Математика</td><td>Қазақ тілі</td><td>Ағылшын</td><td>Қаз тарих</td><td>Алгебра</td></tr>
-                        <tr><td>11:25–12:10</td><td>Көркем еңбек</td><td>Қаз тарих</td><td>Алгебра</td><td>Физика</td><td>Орыс тілі</td><td>География</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
+        <h2 id="schedule-title"></h2>
+        <table id="schedule-table">
+            <tr>
+                <th id="day-header"></th>
+                <th id="lesson-header"></th>
+            </tr>
+        </table>
     </section>
 </main>
 
 <footer>
-    <p>© 2025 №2 орта мектеп. Барлық құқықтар қорғалған.</p>
+    <p id="footer-text"></p>
 </footer>
 
 <script src="script.js"></script>
+<script>
+const dataExtra = {
+    kk: {
+        "schedule-title": "Сабақ кестесі",
+        "day-header": "Күн",
+        "lesson-header": "Пәндер",
+        "schedule-list": [
+            ["Дүйсенбі", "Математика, Қазақ тілі, Физика"],
+            ["Сейсенбі", "Ағылшын тілі, Биология, Тарих"],
+            ["Сәрсенбі", "Математика, Информатика, Музыка"],
+            ["Бейсенбі", "Қазақ тілі, Физика, Шет тілі"],
+            ["Жұма", "Математика, Химия, Дене тәрбиесі"]
+        ]
+    },
+    ru: {
+        "schedule-title": "Расписание",
+        "day-header": "День",
+        "lesson-header": "Предметы",
+        "schedule-list": [
+            ["Понедельник", "Математика, Казахский язык, Физика"],
+            ["Вторник", "Английский язык, Биология, История"],
+            ["Среда", "Математика, Информатика, Музыка"],
+            ["Четверг", "Казахский язык, Физика, Иностранный язык"],
+            ["Пятница", "Математика, Химия, Физкультура"]
+        ]
+    },
+    en: {
+        "schedule-title": "Schedule",
+        "day-header": "Day",
+        "lesson-header": "Subjects",
+        "schedule-list": [
+            ["Monday", "Math, Kazakh language, Physics"],
+            ["Tuesday", "English, Biology, History"],
+            ["Wednesday", "Math, Computer Science, Music"],
+            ["Thursday", "Kazakh language, Physics, Foreign language"],
+            ["Friday", "Math, Chemistry, PE"]
+        ]
+    }
+};
+
+function updateExtra() {
+    const lang = document.getElementById("langSelect").value;
+    const t = dataExtra[lang];
+
+    document.getElementById("schedule-title").innerHTML = t["schedule-title"];
+    document.getElementById("day-header").innerHTML = t["day-header"];
+    document.getElementById("lesson-header").innerHTML = t["lesson-header"];
+
+    const table = document.getElementById("schedule-table");
+    table.innerHTML = `<tr><th>${t["day-header"]}</th><th>${t["lesson-header"]}</th></tr>`;
+
+    t["schedule-list"].forEach(row => {
+        const tr = document.createElement("tr");
+        row.forEach(cell => {
+            const td = document.createElement("td");
+            td.textContent = cell;
+            tr.appendChild(td);
+        });
+        table.appendChild(tr);
+    });
+}
+
+document.getElementById("langSelect").addEventListener("change", updateExtra);
+updateExtra();
+</script>
 </body>
 </html>
