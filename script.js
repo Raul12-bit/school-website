@@ -1,3 +1,7 @@
+
+
+
+
 // ====== Переводы ======
 const translations = {
     kk: {
