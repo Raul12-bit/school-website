@@ -2,72 +2,62 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Жаңалықтар</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <h1 id="title"></h1>
-    <p id="subtitle"></p>
-</header>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="№2 Орта Мектеп" class="logo-img">
+            <div class="logo-text" id="logo">№2 Орта Мектеп</div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" data-key="home">Басты бет</a>
+            <a href="about.html" data-key="about">Мектеп туралы</a>
+            <a href="schedule.html" data-key="schedule">Сабақ кестесі</a>
+            <a href="news.html" data-key="news" class="active">Жаңалықтар</a>
+        </nav>
+        <div class="controls">
+            <select id="languageSelector">
+                <option value="kk">Қазақша</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html" id="nav-main"></a>
-    <a href="about.html" id="nav-about"></a>
-    <a href="schedule.html" id="nav-schedule"></a>
-    <a href="teachers.html" id="nav-teachers"></a>
-    <a href="news.html" id="nav-news"></a>
-    <a href="contacts.html" id="nav-contacts"></a>
+    <main>
+        <section class="hero">
+            <h1 data-key="news-title">Жаңалықтар</h1>
+            <p data-key="news-subtitle">Мектептегі соңғы жаңалықтар</p>
+        </section>
 
-    <select id="langSelect">
-        <option value="kk">Қазақша</option>
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-    </select>
-</nav>
+        <section class="news-list">
+            <div class="news-item">
+                <h2>Математика пәнінен олимпиада</h2>
+                <p>20 қарашада мектеп оқушылары қалалық математика олимпиадасына қатысты.</p>
+                <small>20.11.2025</small>
+            </div>
+            <div class="news-item">
+                <h2>Спорттық іс-шара</h2>
+                <p>Мектеп спорт залында волейбол турнирі өтті.</p>
+                <small>18.11.2025</small>
+            </div>
+            <div class="news-item">
+                <h2>Шығармашылық көрме</h2>
+                <p>Сурет және қолөнер көрмесі ашылды, барлық оқушылар қатыса алады.</p>
+                <small>15.11.2025</small>
+            </div>
+        </section>
+    </main>
 
-<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
+    <footer class="footer">
+        <p>&copy; 2025 №2 Орта Мектеп. Барлық құқықтар қорғалған.</p>
+        <p>Телефон: +7 777 123 45 67 | Email: school2@example.kz</p>
+    </footer>
 
-<main>
-    <section>
-        <h2 id="news-title"></h2>
-        <ul id="news-list"></ul>
-    </section>
-</main>
-
-<footer>
-    <p id="footer-text"></p>
-</footer>
-
-<script src="script.js"></script>
-<script>
-const dataExtra = {
-    kk: {
-        "news-title": "Жаңалықтар",
-        "news-list": "<li>Мектепте жаңа компьютер сыныбы ашылды.</li><li>Спорттық жарыстарда біздің мектеп жеңіске жетті.</li>"
-    },
-    ru: {
-        "news-title": "Новости",
-        "news-list": "<li>В школе открыли новый компьютерный класс.</li><li>Наши ученики победили в спортивных соревнованиях.</li>"
-    },
-    en: {
-        "news-title": "News",
-        "news-list": "<li>A new computer lab was opened in school.</li><li>Our students won in sports competitions.</li>"
-    }
-};
-
-function updateExtra() {
-    const lang = document.getElementById("langSelect").value;
-    const t = dataExtra[lang];
-    for (let key in t) {
-        const el = document.getElementById(key);
-        if (el) el.innerHTML = t[key];
-    }
-}
-
-document.getElementById("langSelect").addEventListener("change", updateExtra);
-updateExtra();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

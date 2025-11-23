@@ -2,114 +2,93 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сабақ кестесі</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <h1 id="title"></h1>
-    <p id="subtitle"></p>
-</header>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="№2 Орта Мектеп" class="logo-img">
+            <div class="logo-text" id="logo">№2 Орта Мектеп</div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" data-key="home">Басты бет</a>
+            <a href="about.html" data-key="about">Мектеп туралы</a>
+            <a href="schedule.html" data-key="schedule" class="active">Сабақ кестесі</a>
+            <a href="news.html" data-key="news">Жаңалықтар</a>
+        </nav>
+        <div class="controls">
+            <select id="languageSelector">
+                <option value="kk">Қазақша</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html" id="nav-main"></a>
-    <a href="about.html" id="nav-about"></a>
-    <a href="schedule.html" id="nav-schedule"></a>
-    <a href="teachers.html" id="nav-teachers"></a>
-    <a href="news.html" id="nav-news"></a>
-    <a href="contacts.html" id="nav-contacts"></a>
+    <main>
+        <section class="hero">
+            <h1 data-key="schedule-title">Сабақ кестесі</h1>
+            <p data-key="schedule-subtitle">Жаңартылған сабақ кестесі</p>
+        </section>
 
-    <select id="langSelect">
-        <option value="kk">Қазақша</option>
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-    </select>
-</nav>
+        <section>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Сабақ</th>
+                        <th>Дүйсенбі</th>
+                        <th>Сейсенбі</th>
+                        <th>Сәрсенбі</th>
+                        <th>Бейсенбі</th>
+                        <th>Жұма</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Математика</td>
+                        <td>Қазақ тілі</td>
+                        <td>Физика</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Тарих</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Қазақ тілі</td>
+                        <td>Химия</td>
+                        <td>Математика</td>
+                        <td>Дүниежүзі тарихы</td>
+                        <td>Физика</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Физика</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Биология</td>
+                        <td>Математика</td>
+                        <td>Қазақ тілі</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Дүниежүзі тарихы</td>
+                        <td>Қазақ тілі</td>
+                        <td>Химия</td>
+                        <td>Математика</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
+    <footer class="footer">
+        <p>&copy; 2025 №2 Орта Мектеп. Барлық құқықтар қорғалған.</p>
+        <p>Телефон: +7 777 123 45 67 | Email: school2@example.kz</p>
+    </footer>
 
-<main>
-    <section>
-        <h2 id="schedule-title"></h2>
-        <table id="schedule-table">
-            <tr>
-                <th id="day-header"></th>
-                <th id="lesson-header"></th>
-            </tr>
-        </table>
-    </section>
-</main>
-
-<footer>
-    <p id="footer-text"></p>
-</footer>
-
-<script src="script.js"></script>
-<script>
-const dataExtra = {
-    kk: {
-        "schedule-title": "Сабақ кестесі",
-        "day-header": "Күн",
-        "lesson-header": "Пәндер",
-        "schedule-list": [
-            ["Дүйсенбі", "Математика, Қазақ тілі, Физика"],
-            ["Сейсенбі", "Ағылшын тілі, Биология, Тарих"],
-            ["Сәрсенбі", "Математика, Информатика, Музыка"],
-            ["Бейсенбі", "Қазақ тілі, Физика, Шет тілі"],
-            ["Жұма", "Математика, Химия, Дене тәрбиесі"]
-        ]
-    },
-    ru: {
-        "schedule-title": "Расписание",
-        "day-header": "День",
-        "lesson-header": "Предметы",
-        "schedule-list": [
-            ["Понедельник", "Математика, Казахский язык, Физика"],
-            ["Вторник", "Английский язык, Биология, История"],
-            ["Среда", "Математика, Информатика, Музыка"],
-            ["Четверг", "Казахский язык, Физика, Иностранный язык"],
-            ["Пятница", "Математика, Химия, Физкультура"]
-        ]
-    },
-    en: {
-        "schedule-title": "Schedule",
-        "day-header": "Day",
-        "lesson-header": "Subjects",
-        "schedule-list": [
-            ["Monday", "Math, Kazakh language, Physics"],
-            ["Tuesday", "English, Biology, History"],
-            ["Wednesday", "Math, Computer Science, Music"],
-            ["Thursday", "Kazakh language, Physics, Foreign language"],
-            ["Friday", "Math, Chemistry, PE"]
-        ]
-    }
-};
-
-function updateExtra() {
-    const lang = document.getElementById("langSelect").value;
-    const t = dataExtra[lang];
-
-    document.getElementById("schedule-title").innerHTML = t["schedule-title"];
-    document.getElementById("day-header").innerHTML = t["day-header"];
-    document.getElementById("lesson-header").innerHTML = t["lesson-header"];
-
-    const table = document.getElementById("schedule-table");
-    table.innerHTML = `<tr><th>${t["day-header"]}</th><th>${t["lesson-header"]}</th></tr>`;
-
-    t["schedule-list"].forEach(row => {
-        const tr = document.createElement("tr");
-        row.forEach(cell => {
-            const td = document.createElement("td");
-            td.textContent = cell;
-            tr.appendChild(td);
-        });
-        table.appendChild(tr);
-    });
-}
-
-document.getElementById("langSelect").addEventListener("change", updateExtra);
-updateExtra();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

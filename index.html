@@ -2,45 +2,63 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>№2 Орта Мектеп</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="N2mektep.jpg" type="image/x-icon">
 </head>
 <body>
-<header>
-    <h1 id="title"></h1>
-    <p id="subtitle"></p>
-</header>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="№2 Орта Мектеп" class="logo-img">
+            <div class="logo-text" id="logo">№2 Орта Мектеп</div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" data-key="home" class="active">Басты бет</a>
+            <a href="about.html" data-key="about">Мектеп туралы</a>
+            <a href="schedule.html" data-key="schedule">Сабақ кестесі</a>
+            <a href="news.html" data-key="news">Жаңалықтар</a>
+        </nav>
+        <div class="controls">
+            <select id="languageSelector">
+                <option value="kk">Қазақша</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html" id="nav-main"></a>
-    <a href="about.html" id="nav-about"></a>
-    <a href="schedule.html" id="nav-schedule"></a>
-    <a href="teachers.html" id="nav-teachers"></a>
-    <a href="news.html" id="nav-news"></a>
-    <a href="contacts.html" id="nav-contacts"></a>
+    <main>
+        <section class="hero">
+            <h1 data-key="hero-title">Қош келдіңіз!</h1>
+            <p data-key="hero-subtitle">Білім мен жетістік жолындағы заманауи мектеп порталы</p>
+        </section>
 
-    <select id="langSelect">
-        <option value="kk">Қазақша</option>
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-    </select>
-</nav>
+        <section class="cards">
+            <div class="card">
+                <img src="icon-about.png" alt="" class="card-icon">
+                <h2 data-key="card-about">Мектеп туралы</h2>
+                <p data-key="card-about-text">Тарихы, мұғалімдер, жетістіктер.</p>
+            </div>
+            <div class="card">
+                <img src="icon-schedule.png" alt="" class="card-icon">
+                <h2 data-key="card-schedule">Сабақ кестесі</h2>
+                <p data-key="card-schedule-text">Жаңартылған күнделікті сабақтар.</p>
+            </div>
+            <div class="card">
+                <img src="icon-news.png" alt="" class="card-icon">
+                <h2 data-key="card-news">Жаңалықтар</h2>
+                <p data-key="card-news-text">Мектеп ішіндегі соңғы ақпараттар.</p>
+            </div>
+        </section>
+    </main>
 
-<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
+    <footer class="footer">
+        <p>&copy; 2025 №2 Орта Мектеп. Барлық құқықтар қорғалған.</p>
+        <p>Телефон: +7 777 123 45 67 | Email: school2@example.kz</p>
+    </footer>
 
-<main>
-    <section>
-        <h2 id="home-title"></h2>
-        <p id="home-text"></p>
-    </section>
-</main>
-
-<footer>
-    <p id="footer-text"></p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

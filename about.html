@@ -2,72 +2,62 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мектеп туралы</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <h1 id="title"></h1>
-    <p id="subtitle"></p>
-</header>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="№2 Орта Мектеп" class="logo-img">
+            <div class="logo-text" id="logo">№2 Орта Мектеп</div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" data-key="home">Басты бет</a>
+            <a href="about.html" data-key="about" class="active">Мектеп туралы</a>
+            <a href="schedule.html" data-key="schedule">Сабақ кестесі</a>
+            <a href="news.html" data-key="news">Жаңалықтар</a>
+        </nav>
+        <div class="controls">
+            <select id="languageSelector">
+                <option value="kk">Қазақша</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html" id="nav-main"></a>
-    <a href="about.html" id="nav-about"></a>
-    <a href="schedule.html" id="nav-schedule"></a>
-    <a href="teachers.html" id="nav-teachers"></a>
-    <a href="news.html" id="nav-news"></a>
-    <a href="contacts.html" id="nav-contacts"></a>
+    <main>
+        <section class="hero">
+            <h1 data-key="about-title">Мектеп туралы</h1>
+            <p data-key="about-subtitle">Біздің мектептің тарихы, мұғалімдері және жетістіктері</p>
+        </section>
 
-    <select id="langSelect">
-        <option value="kk">Қазақша</option>
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-    </select>
-</nav>
+        <section class="cards">
+            <div class="card">
+                <img src="icon-history.png" alt="" class="card-icon">
+                <h2 data-key="history">Тарихы</h2>
+                <p data-key="history-text">№2 орта мектеп 1995 жылы ашылған. Бүгінгі күні мыңдаған оқушылар білім алады.</p>
+            </div>
+            <div class="card">
+                <img src="icon-teachers.png" alt="" class="card-icon">
+                <h2 data-key="teachers">Мұғалімдер</h2>
+                <p data-key="teachers-text">Білікті мұғалімдер командасы әр оқушының жетістігі үшін еңбек етеді.</p>
+            </div>
+            <div class="card">
+                <img src="icon-achievements.png" alt="" class="card-icon">
+                <h2 data-key="achievements">Жетістіктер</h2>
+                <p data-key="achievements-text">Біздің мектеп халықаралық және қалалық олимпиадаларда жеңімпаздар шығарады.</p>
+            </div>
+        </section>
+    </main>
 
-<button id="theme-toggle" title="Түнгі/күндізгі режим">🌙</button>
+    <footer class="footer">
+        <p>&copy; 2025 №2 Орта Мектеп. Барлық құқықтар қорғалған.</p>
+        <p>Телефон: +7 777 123 45 67 | Email: school2@example.kz</p>
+    </footer>
 
-<main>
-    <section>
-        <h2 id="about-title"></h2>
-        <p id="about-text"></p>
-    </section>
-</main>
-
-<footer>
-    <p id="footer-text"></p>
-</footer>
-
-<script src="script.js"></script>
-<script>
-const dataExtra = {
-    kk: {
-        "about-title": "Мектеп туралы",
-        "about-text": "№2 орта мектеп 1990 жылы құрылды. Мұнда білім сапасы жоғары және түрлі үйірмелер бар. Біз балаларға жан-жақты дамуға мүмкіндік береміз."
-    },
-    ru: {
-        "about-title": "О школе",
-        "about-text": "Средняя школа №2 была основана в 1990 году. Здесь высокое качество образования и различные кружки. Мы даем детям возможность развиваться всесторонне."
-    },
-    en: {
-        "about-title": "About School",
-        "about-text": "Secondary School No. 2 was founded in 1990. It has high-quality education and various clubs. We provide children with opportunities for comprehensive development."
-    }
-};
-
-function updateExtra() {
-    const lang = document.getElementById("langSelect").value;
-    const t = dataExtra[lang];
-    for (let key in t) {
-        const el = document.getElementById(key);
-        if (el) el.innerHTML = t[key];
-    }
-}
-
-document.getElementById("langSelect").addEventListener("change", updateExtra);
-updateExtra();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
