@@ -1,0 +1,68 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e73be">
+    <meta name="view-transition" content="same-origin">
+    <title>{% block title %}{% trans "№2 Орта Мектеп" %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="{% url 'portal:index' %}" class="logo-container" aria-label="{% trans 'Басты бетке' %}">
+                <img src="{% static '1234.jpg' %}" alt="" class="logo-img" width="48" height="48">
+                <span class="logo-text" id="logo">{% trans "№2 Орта Мектеп" %}</span>
+            </a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="{% trans 'Мәзірді ашу' %}">
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="header-actions">
+                <nav class="nav" id="mainNav" aria-label="{% trans 'Негізгі мәзір' %}">
+                    <a href="{% url 'portal:index' %}"{% if nav == "home" %} class="active"{% endif %}>{% trans "Басты бет" %}</a>
+                    <a href="{% url 'portal:about' %}"{% if nav == "about" %} class="active"{% endif %}>{% trans "Мектеп туралы" %}</a>
+                    <a href="{% url 'portal:schedule' %}"{% if nav == "schedule" %} class="active"{% endif %}>{% trans "Сабақ кестесі" %}</a>
+                    <a href="{% url 'portal:news' %}"{% if nav == "news" %} class="active"{% endif %}>{% trans "Жаңалықтар" %}</a>
+                </nav>
+                <div class="controls">
+                    <form action="{% url 'set_language' %}" method="post" class="lang-form">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                        <select name="language" id="languageSelector" title="{% trans 'Тілді таңдау' %}" aria-label="{% trans 'Тілді таңдау' %}" onchange="this.form.submit()">
+                            <option value="kk"{% if LANGUAGE_CODE == 'kk' %} selected{% endif %}>{% trans "Қазақша" %}</option>
+                            <option value="ru"{% if LANGUAGE_CODE == 'ru' %} selected{% endif %}>{% trans "Русский" %}</option>
+                            <option value="en"{% if LANGUAGE_CODE == 'en' %} selected{% endif %}>{% trans "English" %}</option>
+                        </select>
+                    </form>
+                    <button type="button" id="themeToggle" class="theme-btn" title="{% trans 'Тақырып' %}">🌙</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>{% trans "№2 Орта Мектеп" %}</strong>
+                <p>{% blocktrans %}© 2026 №2 Орта Мектеп. Барлық құқықтар қорғалған.{% endblocktrans %}</p>
+            </div>
+            <div class="footer-contact">
+                <p>{% trans "Телефон:" %} <a href="tel:+77771234567">+7 777 123 45 67</a></p>
+                <p>Email: <a href="mailto:school2@example.kz">school2@example.kz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block title %}{% trans "Жаңалықтар" %} — {% trans "№2 Орта Мектеп" %}{% endblock %}
+
+{% block content %}
+        <section class="hero">
+            <h1>{% trans "Жаңалықтар" %}</h1>
+            <p>{% trans "Мектептегі соңғы жаңалықтар" %}</p>
+        </section>
+
+        <section class="news-list" aria-label="{% trans 'Жаңалықтар тізімі' %}">
+            {% for item in news_items %}
+            <article class="news-item">
+                <h2>{{ item|loc:"title" }}</h2>
+                <p>{{ item|loc:"body"|linebreaksbr }}</p>
+                <small><time datetime="{{ item.published_at|date:'Y-m-d' }}">{{ item.published_at|date:"d.m.Y" }}</time></small>
+            </article>
+            {% empty %}
+            <p class="empty-hint">{% trans "Жаңалықтар әлі жоқ. Әкімшіліктен қосыңыз." %}</p>
+            {% endfor %}
+        </section>
+{% endblock %}

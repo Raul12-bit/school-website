@@ -1,0 +1,32 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+
+{% block content %}
+        <section class="hero">
+            <h1>{% trans "Қош келдіңіз!" %}</h1>
+            <p>{% trans "Білім мен жетістік жолындағы заманауи мектеп порталы" %}</p>
+        </section>
+
+        <div class="section-intro">
+            <h2>{% trans "Жылдам сілтемелер" %}</h2>
+            <p>{% trans "Мектептің негізгі бөлімдері" %}</p>
+        </div>
+
+        <section class="cards">
+            <a href="{% url 'portal:about' %}" class="card">
+                <h2><span class="card-icon" aria-hidden="true">🏫</span> {% trans "Мектеп туралы" %}</h2>
+                <p>{% trans "Тарихы, мұғалімдер, жетістіктер." %}</p>
+                <span class="card-cta">{% trans "Толығырақ →" %}</span>
+            </a>
+            <a href="{% url 'portal:schedule' %}" class="card">
+                <h2><span class="card-icon" aria-hidden="true">📅</span> {% trans "Сабақ кестесі" %}</h2>
+                <p>{% trans "Жаңартылған күнделікті сабақтар." %}</p>
+                <span class="card-cta">{% trans "Толығырақ →" %}</span>
+            </a>
+            <a href="{% url 'portal:news' %}" class="card">
+                <h2><span class="card-icon" aria-hidden="true">📰</span> {% trans "Жаңалықтар" %}</h2>
+                <p>{% trans "Мектеп ішіндегі соңғы ақпараттар." %}</p>
+                <span class="card-cta">{% trans "Толығырақ →" %}</span>
+            </a>
+        </section>
+{% endblock %}

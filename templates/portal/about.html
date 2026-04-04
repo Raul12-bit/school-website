@@ -1,0 +1,53 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block title %}{% trans "Мектеп туралы" %} — {% trans "№2 Орта Мектеп" %}{% endblock %}
+
+{% block content %}
+        <section class="hero">
+            <h1>{% trans "Мектеп туралы" %}</h1>
+            <p>{% trans "Біздің мектептің тарихы, мұғалімдері және жетістіктері" %}</p>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <h2>{% trans "Тарихы" %}</h2>
+                <p>{% trans "№2 орта мектеп 1995 жылы ашылған. Бүгінгі күні мыңдаған оқушылар білім алады." %}</p>
+            </article>
+            <article class="card">
+                <h2>{% trans "Мұғалімдер" %}</h2>
+                <p>{% trans "Төмендегі тізімді әкімшілік панелінен жаңартуға болады." %}</p>
+            </article>
+            <article class="card">
+                <h2>{% trans "Жетістіктер" %}</h2>
+                <p>{% trans "Біздің мектеп халықаралық және қалалық олимпиадаларда жеңімпаздар шығарады." %}</p>
+            </article>
+        </section>
+
+        <div class="section-intro section-intro--tight">
+            <h2>{% trans "Мұғалімдер тізімі" %}</h2>
+            <p class="muted">{% trans "Нақты деректерді «Әкімшілік → Мұғалімдер» бөлімінен енгізіңіз." %}</p>
+        </div>
+
+        <section class="teachers-grid" aria-label="{% trans 'Мұғалімдер тізімі' %}">
+            {% for teacher in teachers %}
+                <article class="card teacher-card">
+                    <h3 class="teacher-name">{{ teacher }}</h3>
+                    {% if teacher.position or teacher.position_ru or teacher.position_en %}
+                        <p class="teacher-position">{{ teacher|loc:"position" }}</p>
+                    {% endif %}
+                    {% if teacher.subjects.all %}
+                        <p class="teacher-subjects">
+                            <span>{% trans "Пәндер:" %}</span>
+                            {% for subj in teacher.subjects.all %}
+                                <span class="tag">{{ subj|loc:"name" }}</span>
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                </article>
+            {% empty %}
+                <p class="empty-hint">{% trans "Әзірге мұғалімдер қосылмаған. Әкімшіліктен дерек енгізіңіз." %}</p>
+            {% endfor %}
+        </section>
+{% endblock %}

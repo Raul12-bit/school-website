@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1e73be">
     <meta name="view-transition" content="same-origin">
-    <title>№2 Орта Мектеп</title>
+    <title>Сабақ кестесі</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
@@ -23,9 +23,9 @@
             </button>
             <div class="header-actions">
                 <nav class="nav" id="mainNav" aria-label="Негізгі мәзір">
-                    <a href="index.html" data-key="home" class="active">Басты бет</a>
+                    <a href="index.html" data-key="home">Басты бет</a>
                     <a href="about.html" data-key="about">Мектеп туралы</a>
-                    <a href="schedule.html" data-key="schedule">Сабақ кестесі</a>
+                    <a href="schedule.html" data-key="schedule" class="active">Сабақ кестесі</a>
                     <a href="news.html" data-key="news">Жаңалықтар</a>
                 </nav>
                 <div class="controls">
@@ -42,32 +42,58 @@
 
     <main>
         <section class="hero">
-            <h1 data-key="hero-title">Қош келдіңіз!</h1>
-            <p data-key="hero-subtitle">Білім мен жетістік жолындағы заманауи мектеп порталы</p>
+            <h1 data-key="schedule-title">Сабақ кестесі</h1>
+            <p data-key="schedule-subtitle">Жаңартылған сабақ кестесі</p>
         </section>
 
-        <div class="section-intro">
-            <h2 data-key="section-quick">Жылдам сілтемелер</h2>
-            <p data-key="section-quick-desc">Мектептің негізгі бөлімдері</p>
+        <div class="schedule-wrapper" role="region" aria-label="Сабақ кестесі кестесі">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Сабақ</th>
+                        <th>Дүйсенбі</th>
+                        <th>Сейсенбі</th>
+                        <th>Сәрсенбі</th>
+                        <th>Бейсенбі</th>
+                        <th>Жұма</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Математика</td>
+                        <td>Қазақ тілі</td>
+                        <td>Физика</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Тарих</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Қазақ тілі</td>
+                        <td>Химия</td>
+                        <td>Математика</td>
+                        <td>Дүниежүзі тарихы</td>
+                        <td>Физика</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Физика</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Биология</td>
+                        <td>Математика</td>
+                        <td>Қазақ тілі</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ағылшын тілі</td>
+                        <td>Дүниежүзі тарихы</td>
+                        <td>Қазақ тілі</td>
+                        <td>Химия</td>
+                        <td>Математика</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <section class="cards">
-            <a href="about.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">🏫</span> <span data-key="card-about">Мектеп туралы</span></h2>
-                <p data-key="card-about-text">Тарихы, мұғалімдер, жетістіктер.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
-            <a href="schedule.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">📅</span> <span data-key="card-schedule">Сабақ кестесі</span></h2>
-                <p data-key="card-schedule-text">Жаңартылған күнделікті сабақтар.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
-            <a href="news.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">📰</span> <span data-key="card-news">Жаңалықтар</span></h2>
-                <p data-key="card-news-text">Мектеп ішіндегі соңғы ақпараттар.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
-        </section>
     </main>
 
     <footer class="footer">

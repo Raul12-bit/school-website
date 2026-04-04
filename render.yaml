@@ -1,0 +1,17 @@
+# Деплой на https://render.com из GitHub (бесплатный Web Service).
+# В панели Render: New → Blueprint → подключить репозиторий с этим файлом.
+
+services:
+  - type: web
+    name: school-website
+    runtime: python
+    plan: free
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: gunicorn config.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true

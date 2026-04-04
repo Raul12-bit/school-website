@@ -1,0 +1,183 @@
+# English translations for school website
+msgid ""
+msgstr ""
+"Project-Id-Version: school-website\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "© 2026 №2 Орта Мектеп. Барлық құқықтар қорғалған."
+msgstr "© 2026 Secondary School No. 2. All rights reserved."
+
+msgid "English"
+msgstr "English"
+
+msgid "№2 Орта Мектеп"
+msgstr "Secondary School №2"
+
+msgid "Ағылшын тілі"
+msgstr "English"
+
+msgid "Басты бет"
+msgstr "Home"
+
+msgid "Басты бетке"
+msgstr "Back to home"
+
+msgid "Бейсенбі"
+msgstr "Thursday"
+
+msgid "Білім мен жетістік жолындағы заманауи мектеп порталы"
+msgstr "Modern school portal on the path of knowledge and success"
+
+msgid "Биология"
+msgstr "Biology"
+
+msgid "Біздің мектеп халықаралық және қалалық олимпиадаларда жеңімпаздар шығарады."
+msgstr "Our school trains winners of city and international olympiads."
+
+msgid "Біздің мектептің тарихы, мұғалімдері және жетістіктері"
+msgstr "Our history, teachers, and achievements"
+
+msgid "Дүниежүзі тарихы"
+msgstr "World history"
+
+msgid "Дүйсенбі"
+msgstr "Monday"
+
+msgid "Жаңалықтар"
+msgstr "News"
+
+msgid "Жаңалықтар әлі жоқ. Әкімшіліктен қосыңыз."
+msgstr "No news yet. Add items in the admin site."
+
+msgid "Жаңалықтар тізімі"
+msgstr "News list"
+
+msgid "Жаңартылған күнделікті сабақтар."
+msgstr "Updated daily schedule."
+
+msgid "Жаңартылған сабақ кестесі"
+msgstr "Up-to-date timetable"
+
+msgid "Жексенбі"
+msgstr "Sunday"
+
+msgid "Жетістіктер"
+msgstr "Achievements"
+
+msgid "Жұма"
+msgstr "Friday"
+
+msgid "Қазақ тілі"
+msgstr "Kazakh"
+
+msgid "Қазақша"
+msgstr "Kazakh"
+
+msgid "Математика"
+msgstr "Mathematics"
+
+msgid "Мектеп ішіндегі соңғы ақпараттар."
+msgstr "Latest information from the school."
+
+msgid "Мектеп туралы"
+msgstr "About the school"
+
+msgid "Мектептегі соңғы жаңалықтар"
+msgstr "Latest school news"
+
+msgid "Мектептің негізгі бөлімдері"
+msgstr "Main sections of the site"
+
+msgid "Мұғалімдер"
+msgstr "Teachers"
+
+msgid "Мұғалімдер тізімі"
+msgstr "Teachers list"
+
+msgid "Мәзірді ашу"
+msgstr "Open menu"
+
+msgid "Нақты деректерді «Әкімшілік → Мұғалімдер» бөлімінен енгізіңіз."
+msgstr "Add real data under Admin → Teachers."
+
+msgid "Негізгі мәзір"
+msgstr "Main menu"
+
+msgid "Пәндер:"
+msgstr "Subjects:"
+
+msgid "Русский"
+msgstr "Russian"
+
+msgid "Сабақ"
+msgstr "Lesson"
+
+msgid "Сабақ кестесі"
+msgstr "Schedule"
+
+msgid "Сабақ кестесі кестесі"
+msgstr "Schedule table"
+
+msgid "Сейсенбі"
+msgstr "Tuesday"
+
+msgid "Сенбі"
+msgstr "Saturday"
+
+msgid "Сынып"
+msgstr "Class"
+
+msgid "Сыныптар әлі қосылмаған. Әкімшіліктен сынып пен кестені енгізіңіз."
+msgstr "No classes yet. Add classes and schedule in the admin site."
+
+msgid "Сыныпты таңдаңыз:"
+msgstr "Choose class:"
+
+msgid "Сәрсенбі"
+msgstr "Wednesday"
+
+msgid "Тарих"
+msgstr "History"
+
+msgid "Тарихы"
+msgstr "History"
+
+msgid "Тарихы, мұғалімдер, жетістіктер."
+msgstr "History, teachers, achievements."
+
+msgid "Тақырып"
+msgstr "Theme"
+
+msgid "Телефон:"
+msgstr "Phone:"
+
+msgid "Тілді таңдау"
+msgstr "Choose language"
+
+msgid "Толығырақ →"
+msgstr "Read more →"
+
+msgid "Төмендегі тізімді әкімшілік панелінен жаңартуға болады."
+msgstr "You can update the list below in the admin panel."
+
+msgid "Физика"
+msgstr "Physics"
+
+msgid "Химия"
+msgstr "Chemistry"
+
+msgid "Әзірге мұғалімдер қосылмаған. Әкімшіліктен дерек енгізіңіз."
+msgstr "No teachers yet. Add them in the admin site."
+
+msgid "№2 орта мектеп 1995 жылы ашылған. Бүгінгі күні мыңдаған оқушылар білім алады."
+msgstr "School №2 opened in 1995. Today, thousands of students study here."
+
+msgid "Қош келдіңіз!"
+msgstr "Welcome!"
+
+msgid "Жылдам сілтемелер"
+msgstr "Quick links"

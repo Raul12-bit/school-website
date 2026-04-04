@@ -1,0 +1,64 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block title %}{% trans "Сабақ кестесі" %} — {% trans "№2 Орта Мектеп" %}{% endblock %}
+
+{% block content %}
+        <section class="hero">
+            <h1>{% trans "Сабақ кестесі" %}</h1>
+            <p>{% trans "Жаңартылған сабақ кестесі" %}</p>
+        </section>
+
+        {% if classes %}
+        <div class="schedule-toolbar">
+            <label for="classSelect" class="schedule-toolbar-label">{% trans "Сыныпты таңдаңыз:" %}</label>
+            <select id="classSelect" class="schedule-class-select" aria-label="{% trans 'Сынып' %}">
+                {% for c in classes %}
+                    <option value="{% url 'portal:schedule_class' c.slug %}"{% if selected_class and c.pk == selected_class.pk %} selected{% endif %}>
+                        {{ c }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        {% endif %}
+
+        {% if selected_class %}
+        <div class="schedule-wrapper" role="region" aria-label="{% trans 'Сабақ кестесі кестесі' %}">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>{% trans "Сабақ" %}</th>
+                        {% for label in weekday_labels %}
+                            <th>{{ label }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in schedule_rows %}
+                    <tr>
+                        <td>{{ row.lesson }}</td>
+                        {% for cell in row.cells %}
+                        <td>
+                            {% if cell %}
+                                <span class="schedule-subject">{{ cell.subject|loc:"name" }}</span>
+                                {% if cell.teacher %}
+                                    <span class="schedule-teacher">{{ cell.teacher.short_name }}</span>
+                                {% endif %}
+                                {% if cell.room %}
+                                    <small class="schedule-room">{{ cell.room }}</small>
+                                {% endif %}
+                            {% else %}
+                                <span class="schedule-empty">—</span>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="empty-hint">{% trans "Сыныптар әлі қосылмаған. Әкімшіліктен сынып пен кестені енгізіңіз." %}</p>
+        {% endif %}
+{% endblock %}

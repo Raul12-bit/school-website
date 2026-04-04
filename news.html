@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1e73be">
     <meta name="view-transition" content="same-origin">
-    <title>№2 Орта Мектеп</title>
+    <title>Жаңалықтар</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
@@ -23,10 +23,10 @@
             </button>
             <div class="header-actions">
                 <nav class="nav" id="mainNav" aria-label="Негізгі мәзір">
-                    <a href="index.html" data-key="home" class="active">Басты бет</a>
+                    <a href="index.html" data-key="home">Басты бет</a>
                     <a href="about.html" data-key="about">Мектеп туралы</a>
                     <a href="schedule.html" data-key="schedule">Сабақ кестесі</a>
-                    <a href="news.html" data-key="news">Жаңалықтар</a>
+                    <a href="news.html" data-key="news" class="active">Жаңалықтар</a>
                 </nav>
                 <div class="controls">
                     <select id="languageSelector" title="Тілді таңдау">
@@ -42,31 +42,26 @@
 
     <main>
         <section class="hero">
-            <h1 data-key="hero-title">Қош келдіңіз!</h1>
-            <p data-key="hero-subtitle">Білім мен жетістік жолындағы заманауи мектеп порталы</p>
+            <h1 data-key="news-title">Жаңалықтар</h1>
+            <p data-key="news-subtitle">Мектептегі соңғы жаңалықтар</p>
         </section>
 
-        <div class="section-intro">
-            <h2 data-key="section-quick">Жылдам сілтемелер</h2>
-            <p data-key="section-quick-desc">Мектептің негізгі бөлімдері</p>
-        </div>
-
-        <section class="cards">
-            <a href="about.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">🏫</span> <span data-key="card-about">Мектеп туралы</span></h2>
-                <p data-key="card-about-text">Тарихы, мұғалімдер, жетістіктер.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
-            <a href="schedule.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">📅</span> <span data-key="card-schedule">Сабақ кестесі</span></h2>
-                <p data-key="card-schedule-text">Жаңартылған күнделікті сабақтар.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
-            <a href="news.html" class="card">
-                <h2><span class="card-icon" aria-hidden="true">📰</span> <span data-key="card-news">Жаңалықтар</span></h2>
-                <p data-key="card-news-text">Мектеп ішіндегі соңғы ақпараттар.</p>
-                <span class="card-cta" data-key="card-more">Толығырақ →</span>
-            </a>
+        <section class="news-list" aria-label="Жаңалықтар тізімі">
+            <article class="news-item">
+                <h2>Математика пәнінен олимпиада</h2>
+                <p>20 қарашада мектеп оқушылары қалалық математика олимпиадасына қатысты.</p>
+                <small><time datetime="2025-11-20">20.11.2025</time></small>
+            </article>
+            <article class="news-item">
+                <h2>Спорттық іс-шара</h2>
+                <p>Мектеп спорт залында волейбол турнирі өтті.</p>
+                <small><time datetime="2025-11-18">18.11.2025</time></small>
+            </article>
+            <article class="news-item">
+                <h2>Шығармашылық көрме</h2>
+                <p>Сурет және қолөнер көрмесі ашылды, барлық оқушылар қатыса алады.</p>
+                <small><time datetime="2025-11-15">15.11.2025</time></small>
+            </article>
         </section>
     </main>
 
