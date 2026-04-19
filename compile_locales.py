@@ -5,7 +5,7 @@ import polib
 
 BASE = Path(__file__).resolve().parent
 
-for lang in ("ru", "en"):
+for lang in ("kk", "ru", "en"):
     po_path = BASE / "locale" / lang / "LC_MESSAGES" / "django.po"
     if not po_path.is_file():
         continue
